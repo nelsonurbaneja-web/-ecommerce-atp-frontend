@@ -1,0 +1,43 @@
+@import "styles/mixin";
+
+.header {
+  width: 100%;
+  background-color: white;
+  height: var(--headerHeight);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.05);
+  padding: 1rem 2rem;
+  gap: 1rem;
+  &:hover {
+    box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.1) ;
+  }
+  @include from(m) {
+    justify-content: space-between;
+  }
+}
+
+.header_nav {
+  display: none;
+  @include from(880px) {
+    display: block;
+  }
+}
+
+.header_toggle, .header_shopping_movil {
+  cursor: pointer;
+  @include from(880px) {
+    display: none;
+  }
+}
+
+.header_search_container {
+  display: none;
+  @include from(880px) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .8rem;
+  }
+}

@@ -1,0 +1,154 @@
+$breakPoints: (
+  s: 280px,
+  m: 640px,
+  l: 1024px,
+  xl: 1200px,
+);
+
+@mixin font-80 {
+  font-weight: 400;
+  --size: 20px;
+  font-size: var(--size);
+  &.lato {
+    font-family: 'Lato', sans-serif;
+  }
+  &.bebas {
+    font-family: 'Bebas Neue', cursive;
+  }
+  &.sm-bold {
+    font-weight: 600;
+  }
+  &.bold {
+    font-weight: 800;
+  }
+  @include from(m) {
+    --size: 80px;
+  }
+}
+
+@mixin font-36 {
+  font-weight: 400;
+  --size: 25px;
+  font-size: var(--size);
+  &.lato {
+    font-family: 'Lato', sans-serif;
+  }
+  &.bebas {
+    font-family: 'Bebas Neue', cursive;
+  }
+  &.sm-bold {
+    font-weight: 600;
+  }
+  &.bold {
+    font-weight: 800;
+  }
+  @include from(m) {
+    --size: 36px;
+  }
+}
+
+
+@mixin font-18 {
+  font-weight: 400;
+  font-size: var(--size);
+  --size: 16px;
+  &.lato {
+    font-family: 'Lato', sans-serif;
+  }
+  &.bebas {
+    font-family: 'Bebas Neue', cursive;
+  }
+  &.sm-bold {
+    font-weight: 600;
+  }
+  &.bold {
+    font-weight: 800;
+  }
+  @include from(m) {
+    --size: 18px;
+  }
+}
+
+@mixin font-16 {
+  --size: 16px;
+  font-weight: 400;
+  font-size: var(--size);
+  &.lato {
+    font-family: 'Lato', sans-serif;
+  }
+  &.bebas {
+    font-family: 'Bebas Neue', cursive;
+  }
+  &.sm-bold {
+    font-weight: 600;
+  }
+  &.bold {
+    font-weight: 800;
+  }
+  @include from(m) {
+    --size: 16px;
+  }
+}
+
+@mixin font-12 {
+  font-weight: 400;
+  --size: 12px;
+  font-size: var(--size);
+  &.lato {
+    font-family: 'Lato', sans-serif;
+  }
+  &.bebas {
+    font-family: 'Bebas Neue', cursive;
+  }
+  &.sm-bold {
+    font-weight: 600;
+  }
+  &.bold {
+    font-weight: 800;
+  }
+  @include from(m) {
+    --size: 12px;
+  }
+}
+
+@mixin maxWidth {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+// Mixin para las media queries.
+@mixin from($bp) {
+  @if map-has-key($breakPoints, $bp) {
+    @media screen and(min-width: map-get($breakPoints, $bp)) {
+      @content;
+    }
+  } @else {
+    @media screen and(min-width: $bp) {
+      @content;
+    }
+  }
+}
+
+
+// Sistema de margenes y padding top bottom left right de 5px a 200px
+@for $i from 0 through 40 {
+  .pxy-#{$i*5} {
+    padding: #{$i * 5px} !important;
+  }
+  .pb-#{$i*5} {
+    padding-bottom: #{$i * 5px} !important;
+  }
+  .pt-#{$i*5} {
+    padding-top: #{$i * 5px} !important;
+  }
+  .pr-#{$i*5} {
+    padding-right: #{$i * 5px} !important;
+  }
+  .pl-#{$i*5} {
+    padding-left: #{$i * 5px} !important;
+  }
+}

@@ -1,0 +1,28 @@
+@import url('/styles/mixin');
+
+.main_menu {
+  display: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .8rem;
+}
+
+.main_menu_item {
+  height: 18px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .3rem;
+  cursor: pointer;
+  margin-top: .5rem;
+  color: var(--gray);
+  &:hover {
+    color: var(--red);
+  }
+  svg {
+    margin-top: -.1rem;
+  }
+}
