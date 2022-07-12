@@ -6,7 +6,7 @@ const InputSearch = () => {
   return (
     <div className={styles.input_search}>
       <input type="text" name="search" id="search" placeholder="Buscar..." />
-      <HiOutlineSearch size={20} color="#626262" className={styles.input_search_icon} />
+      <HiOutlineSearch size={20} color="#313131" className={styles.input_search_icon} />
     </div>
   )
 }

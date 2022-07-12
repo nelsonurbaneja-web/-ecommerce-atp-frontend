@@ -18,11 +18,11 @@
   gap: .3rem;
   cursor: pointer;
   margin-top: .5rem;
-  color: var(--gray);
+  color: var(--black);
   &:hover {
     color: var(--red);
   }
   svg {
-    margin-top: -.1rem;
+    margin-top: -.3rem;
   }
 }
