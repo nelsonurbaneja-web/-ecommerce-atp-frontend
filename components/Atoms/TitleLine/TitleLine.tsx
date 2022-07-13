@@ -8,7 +8,7 @@ interface TitleLinePropss {
 
 const TitleLine = ({ title, customClass} : TitleLinePropss) => {
   return (
-    <h2 className={`${customClass ? customClass: ''} ${styles.title}`}>{ title }</h2>
+    <h2 className={`${customClass ? customClass: ''} ${styles.title}`}>{ title.toUpperCase() }</h2>
   )
 }
 

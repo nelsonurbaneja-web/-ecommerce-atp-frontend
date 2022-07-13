@@ -1,0 +1,26 @@
+.product_container {
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 1px 6px 5px rgb(0 0 0 / 10%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
+  }
+  img {
+    border-bottom: 1px solid #eaeaea !important;
+  }
+}
+
+
+.product_content {
+  background-color: white;
+  padding: 1rem 1.5rem 1.5rem;
+  border-radius: 4px;
+}

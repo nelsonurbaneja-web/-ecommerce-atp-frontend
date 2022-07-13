@@ -1,0 +1,14 @@
+.grid_product_container {
+  width: 100%;
+  background-color: #f5f3f3;
+  padding-top: 3rem;
+}
+
+.grid_product {
+  width: 100%;
+  background-color: #f5f3f3;
+  padding: 3rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}

@@ -1,0 +1,49 @@
+@import '/styles/mixin';
+
+.grid_categories {
+  width: 100%;
+  position: sticky;
+  margin-top: 3rem;
+  top: var(--headerHeight);
+  background-color:white;
+  z-index: var(--z-fixed);
+  padding: 2rem 1rem;
+  border-top: 1px solid #eaeaea;
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.grid_categories_list {
+  width: 100%;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  @include from(880px) {
+    justify-content: center;
+  }
+
+}
+
+.grid_categories_item {
+  padding: 1rem;
+  background-color: white;
+  color: var(--red);
+  border: 1px solid var(--red);
+  cursor: pointer;
+  white-space: nowrap;
+  &:hover {
+    background-color: var(--red);
+    color: white;
+    border: 1px solid var(--red);
+  }
+}
+
+.active {
+  border: 1px solid var(--red);
+  background-color: var(--red);
+  color: white;
+}

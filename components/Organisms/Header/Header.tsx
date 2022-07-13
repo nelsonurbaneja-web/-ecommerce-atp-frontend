@@ -7,13 +7,14 @@ import styles from './Header.module.scss'
 
 const Header = () => {
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header_container}`}>
+    <div className={`max-width ${styles.header}`}>
       <div className={styles.header_toggle}>
         <IconToggle />
       </div>
-      <div className={styles.header_nav}>
+      {/* <div className={styles.header_nav}>
         <NavMenu />
-      </div>
+      </div> */}
       <Logo />
       <div className={styles.header_search_container}>
         <InputSearch />
@@ -22,6 +23,7 @@ const Header = () => {
       <div className={styles.header_shopping_movil}>
         <IconShoppingBag />
       </div>
+    </div>
     </header>
   )
 }
