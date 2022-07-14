@@ -1,17 +1,21 @@
-import Image from 'next/image'
-import logo from 'public/assets/ATPMOTOR_ORIGINAL_SMALL.png'
+import Image from "next/image"
+import Link from "next/link"
+import logo from "public/assets/ATPMOTOR_ORIGINAL_SMALL.png"
 
 const Logo = () => {
   return (
-    <Image
-      src={logo}
-      alt="logo"
-      width={130}
-      height={33}
-      placeholder="blur"
-      title="ATP MOTOR SPORT"
-    />
-  );
-};
+    <Link href="/">
+      <Image
+        src={logo}
+        alt="ATP MOTOR SPORT"
+        width={130}
+        height={33}
+        placeholder="blur"
+        title="ATP MOTOR SPORT"
+        className="cursor_p"
+      />
+    </Link>
+  )
+}
 
-export default Logo;
+export default Logo

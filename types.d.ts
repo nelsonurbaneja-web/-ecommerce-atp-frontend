@@ -1,8 +1,8 @@
-export interface Product {
+export type Product = {
   id: number
   price: number
   title: string
   slug: string
-  image: StaticImageData    
+  image: StaticImageData
   description: string
 }

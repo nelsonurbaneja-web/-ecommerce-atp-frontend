@@ -16,7 +16,6 @@ body {
 
 .main-app {
   width: 100%;
-  overflow-x: hidden;
   min-height: calc(100vh);
   display: flex;
   flex-direction: column;
@@ -141,91 +140,50 @@ a {
   color: var(--bold);
 }
 
-// .button {
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   justify-content: center;
-//   text-align: center;
-//   padding: 0px 30px;
-//   height: 50px;
-//   border-radius: var(--radiusButton);
-//   outline: 0;
-//   border: 2px solid transparent;
-//   cursor: pointer;
-//   font-size: 16px;
-//   white-space: nowrap;
-//   font-weight: 400;
-//   font-family: "Poppins", sans-serif;
-//   background-color: var(--greenSecondary);
-//   color: var(--white);
-//   &[disabled] {
-//     pointer-events: none;
-//     cursor: not-allowed;
-//     opacity: 0.5;
-//   }
-//   &.large {
-//     height: 50px;
-//   }
-//   &.primary {
-//     min-width: 150px;
-//     background-color: var(--greenSecondary);
-//     color: var(--white);
-//     border: 1px solid var(--greenSecondary);
-//     border: none;
-//     &:hover {
-//       background-color: darken($greenSecondary, 3);
-//     }
-//     &.outline {
-//       color: var(--greenSecondary);
-//       background-color: transparent;
-//       border: 2px solid var(--greenSecondary);
-//       &:hover {
-//         background-color: var(--greenSecondary);
-//         border: 2px solid var(--greenSecondary);
-//         color: var(--white);
-//       }
-//     }
-//   }
-//   &.secondary {
-//     min-width: 150px;
-//     background-color: var(--greenPrimary);
-//     color: var(--white);
-//     border: 1px solid var(--greenPrimary);
-//     border: none;
-//     &:hover {
-//       background-color: darken($greenPrimary, 3);
-//     }
-//     &.outline {
-//       color: var(--greenPrimary);
-//       background-color: transparent;
-//       border: 2px solid var(--greenPrimary);
-//       &:hover {
-//         background-color: var(--greenPrimary);
-//         border: 2px solid var(--greenPrimary);
-//         color: var(--white);
-//       }
-//     }
-//   }
-//   &.white {
-//     background-color: var(--white);
-//     color: var(--greenSecondary);
-//     border: 1px solid var(--white);
-//     &:hover {
-//       color: white;
-//       background-color: transparent;
-//       border: 1px solid var(--white);
-//     }
-//     &.outline {
-//       color: var(--white);
-//       background-color: transparent;
-//       border: 2px solid var(--white);
-//       &:hover {
-//         background-color: var(--white);
-//         border: 2px solid var(--white);
-//         color: var(--greenSecondary);
-//       }
-//     }
-//   }
-// }
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0px 30px;
+  height: 50px;
+  border-radius: 4px;
+  outline: 0;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 16px;
+  white-space: nowrap;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: var(--white);
+  &[disabled] {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  &.primary {
+    min-width: 150px;
+    background-color: var(--blue);
+    color: var(--white);
+    border: 1px solid var(--blue);
+    border: none;
+    &.block {
+      width: 100%;
+    }
+    &:hover {
+      background-color: darken($blue, 3);
+    }
+    &.outline {
+      color: var(--greenSecondary);
+      background-color: transparent;
+      border: 2px solid var(--greenSecondary);
+      &:hover {
+        background-color: var(--greenSecondary);
+        border: 2px solid var(--greenSecondary);
+        color: var(--white);
+      }
+    }
+  }
+}
   

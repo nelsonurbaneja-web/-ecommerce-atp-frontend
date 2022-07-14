@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Product } from 'types'
@@ -6,7 +6,7 @@ import styles from './ProductCard.module.scss'
 
 const ProductCard = ({ price, title, image, description, slug } : Product ) => {
   return (
-    <Link href={`/${slug}`}>
+    <Link href={`/producto/${slug}`}>
       <article className={styles.product_container} >
         <Image objectFit="contain" src={image} alt={title} width={500} height={500} title={title} />
         <div className={styles.product_content}>
