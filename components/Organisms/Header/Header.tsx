@@ -1,4 +1,5 @@
-import IconShoppingBag from 'components/Atoms/IconShoppingBag/IconShoppingBag';
+
+import IconCart from 'components/Atoms/IconCart/IconCart';
 import IconToggle from 'components/Atoms/IconToggle/IconToggle';
 import InputSearch from 'components/Atoms/InputSearch/InputSearch';
 import Logo from 'components/Atoms/Logo/Logo';
@@ -9,7 +10,7 @@ import { useContext } from 'react';
 import styles from './Header.module.scss'
 
 const Header = () => {
-  const cartContext = useContext(CartContext)
+  
   return (
     <header className={`${styles.header_container}`}>
       <div className={`max-width ${styles.header}`}>
@@ -24,14 +25,13 @@ const Header = () => {
           <InputSearch />
           <Link href="/carrito">
             <div>
-              {cartContext.state.cart.length > 0 && cartContext.state.cart.length}
-              <IconShoppingBag />
+              <IconCart />
             </div>
           </Link>
         </div>
         <Link href="/carrito">
           <div className={styles.header_shopping_movil}>
-            <IconShoppingBag />
+            <IconCart />
           </div>
         </Link>
       </div>

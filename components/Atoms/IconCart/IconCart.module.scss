@@ -1,0 +1,20 @@
+.icon_cart_container {
+  position: relative;
+}
+
+.icon_cart_count{
+  width: 9px;
+  height: 9px;
+  position: absolute;
+  top: -10px;
+  right: -13px;
+  color: #fff;
+  background-color: rgb(228, 68, 68);
+  border-radius: 50%;
+  text-align: center;
+  padding: .75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}

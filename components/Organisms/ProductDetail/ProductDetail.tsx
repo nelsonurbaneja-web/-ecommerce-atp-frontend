@@ -62,10 +62,12 @@ const ProductDetail = ({ productList, productDetail } : ProductDetailProps ) => 
             }
           </div>
         </div>
+       <div>
         <div className="max-width">
-          <TitleLine customClass="font-36 c-black bebas mt-55 mb-0" title="Productos relacionados" />
-        </div>
-        <ProductGrid productList={productList} />
+            <TitleLine customClass="font-36 c-black bebas mt-55 mb-0" title="Productos relacionados" />
+          </div>
+          <ProductGrid productList={productList} />
+       </div>
       </article>
     </>
   );

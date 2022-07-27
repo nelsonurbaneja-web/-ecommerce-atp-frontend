@@ -20,6 +20,9 @@ export type CartReducerAction = {
 } | {
   type: 'INIT_STORE',
   payload: Product[]
+} | {
+  type: 'REMOVE_PRODUCT',
+  payload: number
 }
 
 const cartReducer = (state: CartReducerState, action: CartReducerAction) => {
@@ -34,6 +37,11 @@ const cartReducer = (state: CartReducerState, action: CartReducerAction) => {
       ...state,
       cart: [...state.cart, action.payload]
     }  
+    case 'REMOVE_PRODUCT':
+    return {
+      ...state,
+      cart: state.cart.filter(product => product.id !== action.payload)
+    }
   }
 }
 
