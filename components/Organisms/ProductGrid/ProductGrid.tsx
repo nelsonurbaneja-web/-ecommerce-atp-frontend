@@ -3,7 +3,6 @@ import React from 'react'
 import { Product } from 'types'
 import styles from './ProductGrid.module.scss'
 
-
 interface ProductGridProps {
   productList: Product[],
   space_top?: boolean

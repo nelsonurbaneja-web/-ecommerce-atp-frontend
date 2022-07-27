@@ -2,12 +2,13 @@ import { GridCars} from 'components/Organisms/GridCars/GridCars'
 import GridCategories from 'components/Organisms/GridCategories/GridCategories'
 import ProductGrid from 'components/Organisms/ProductGrid/ProductGrid'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
-import motor from 'public/assets/motor.png'
-import inyector from 'public/assets/inyector-chevrolet-aveo-lt-ls.jpg'
-import empacadura from 'public/assets/empacadura-camara-nissan-sentra-b13-b14.jpg'
-import bomba from 'public/assets/bomba-de-aceite-chery-arauca-x1.jpg'
-import amortiguador from 'public/assets/base-amortiguador-delantera-optra.jpg'
 import { Product } from 'types'
+import motor from "public/assets/images/motor_i.png";
+import inyector from "public/assets/images/inyector_i.png";
+import empacadura from "public/assets/images/empacadura_i.png";
+import bomba from "public/assets/images/bomba_i.png";
+import amortiguador from "public/assets/images/amortiguador_i.png";
+import bombaDeAguaAveo from "public/assets/images/bomba-de-agua-aveo.png";
 
 interface HomeProps {
   productList: Product[]
@@ -26,7 +27,7 @@ const Home = ({ productList } : InferGetStaticPropsType<typeof getStaticProps>) 
 export default Home
 
 export const getStaticProps : GetStaticProps<HomeProps> = async () => {
-  const productList : Product[] = [
+  const productList = [
     {
       id: 1,
       price: 850,
@@ -106,6 +107,14 @@ export const getStaticProps : GetStaticProps<HomeProps> = async () => {
       title: 'Base de Amortiguador Delantera Chevrolet',
       image: amortiguador,
       description: 'Base de Amortiguador Delantera Chevrolet Optra'
+    },
+    {
+      id: 11,
+      price: 16,
+      slug: 'bomba-de-agua-aveo',
+      title: 'Bomba De Agua Aveo Nubira Lanos Motor 1.6 Original Gm',
+      image: bombaDeAguaAveo,
+      description: 'Bomba Agua Aveo 1.6 Lt Speed 05/2015 Todo Bomba De Agua Aveo Nubira Lanos Motor 1.6 Original Gm'
     }
   ]
 
