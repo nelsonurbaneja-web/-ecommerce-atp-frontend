@@ -1,18 +1,23 @@
 import { CartContext } from 'context/CartContext'
-import { useContext, useMemo } from 'react'
-import { formatPrice } from 'services/formatPrice'
+import { useContext } from 'react'
 import styles from './CartGrid.module.scss'
 import ProductCartItem from 'components/Molecules/ProductCartItem/ProductCartItem'
+import CardTotalCart from 'components/Molecules/CardTotalCart/CardTotalCart'
+import Link from 'next/link'
 
 const CartGrid = () => {
   const { state } = useContext(CartContext)
 
-  const textWhatsApp = useMemo(() => {
-    return (`Hola, quiero comprar *${state.cart.length}* producto(s).\n ${state.cart.map((product, key) => `${key + 1}. ${product.title} - ${formatPrice(product.price)}\n`)} \n Total: ${`*${formatPrice(state.cart.reduce((acc, product) => acc + product.price, 0))}*`}`)
-  }, [state.cart])
-
-  const handleClickWhatsapp = () => {
-    window.open(`https://wa.me/584129625261?text=${encodeURIComponent(textWhatsApp)}`)
+  if(state.cart.length === 0) {
+    return (
+      <section className={styles.cart_grid_container}>
+        <div className={`max-width`}>
+          <h1 className="mb-25">Mis compras</h1>
+          <p className="font-16 bold mt-0 mb-15">No tienes productos en tu carrito</p>
+          <Link href="/"><button className="button primary">Quiero ver productos</button></Link>
+        </div>
+      </section>
+    )
   }
 
   return (
@@ -24,14 +29,7 @@ const CartGrid = () => {
             <ProductCartItem product={product} key={product.id} />
           )}
         </div>
-        <div className={styles.cart_total}>
-          <p className="font-22 light mt-0 mb-15">Total: <span className="font-22 sm-bold c-black">{ formatPrice(state.cart.reduce((acc, product) => acc + product.price, 0 ))}</span></p>
-        </div>
-        <div className={styles.cart_total} >
-          <button className="button primary" onClick={handleClickWhatsapp}>
-            Completar pedido
-          </button>
-        </div>
+        <CardTotalCart />
       </div>
     </section>
   )

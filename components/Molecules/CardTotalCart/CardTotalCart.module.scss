@@ -1,0 +1,38 @@
+
+@import "styles/mixin";
+
+.cart_total_container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart_total {
+  width: 100%;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  border-radius: 6px;
+  filter: drop-shadow(0 0 1px rgba(0,0,0,.12));
+  border: 1px solid #ebebeb;
+
+  @include from(880px) {
+    min-width: 500px;
+    width: auto;
+  }
+}
+
+.cart_total_header {
+  background-color: #fff;
+  padding: 1rem;
+  border-bottom: 1px solid var(--gray-fondo);
+}
+
+.cart_total_content {
+  background-color: #fff;
+  padding: 1rem;
+  p {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gray-fondo);
+    display: flex;
+    justify-content: space-between;
+  }
+}
