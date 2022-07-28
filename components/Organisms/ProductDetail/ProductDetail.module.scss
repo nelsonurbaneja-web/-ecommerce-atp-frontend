@@ -39,19 +39,3 @@
   border-radius: 8px;
   padding: 2rem 1rem;
 } 
-
-.product_image_controls {
-  font-size: 28px;
-  color: var(--black);
-  padding: 1.5rem 0 1rem;
-  display: flex;
-  align-items: center;
-  justify-content:center;
-  gap: 1rem;
-  svg {
-    cursor: pointer;
-    &:hover {
-      color: var(--red);
-    }
-  }
-}

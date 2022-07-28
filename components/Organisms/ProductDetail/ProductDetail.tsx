@@ -1,15 +1,13 @@
 import React, { useContext } from "react";
 import Image from "next/image";
 import styles from "./ProductDetail.module.scss";
-import ProductGrid from "components/Organisms/ProductGrid/ProductGrid";
 import { Product } from "types";
-import TitleLine from "components/Atoms/TitleLine/TitleLine";
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import { HiOutlineZoomIn, HiOutlineZoomOut, HiOutlineShoppingCart } from "react-icons/hi";
-import { AiOutlineFullscreenExit } from "react-icons/ai";
+import { HiOutlineShoppingCart } from "react-icons/hi";
 import { addProductToCartToLocalStorage } from 'services/addProductToCartToLocalStorage'
 import { CartContext } from "context/CartContext";
 import { formatPrice } from "services/formatPrice";
+import ImageZoomWrapper from "components/Molecules/ImageZoomWrapper/ImageZoomWrapper";
+import RelatedProducts from "components/Organisms/RelatedProducts/RelatedProducts";
 
 interface ProductDetailProps {
   productList: Product[]
@@ -33,20 +31,9 @@ const ProductDetail = ({ productList, productDetail } : ProductDetailProps ) => 
       <article className={styles.product_detail_container}>
         <div className={`max-width ${styles.product_detail}`}>
           <div className={styles.product_image}>
-            <TransformWrapper>
-              {({ zoomIn, zoomOut, resetTransform} : any ) => (
-                <>
-                <TransformComponent>
-                  <Image objectFit="contain" src={productDetail?.image} alt={productDetail?.title} width={500} height={500} title={productDetail?.title} />
-                </TransformComponent>
-                <div className={styles.product_image_controls}>
-                  <HiOutlineZoomIn onClick={() => zoomIn()} />
-                  <HiOutlineZoomOut onClick={() => zoomOut()} />
-                  <AiOutlineFullscreenExit onClick={() => resetTransform()} />
-                </div>
-                </>
-              )}
-            </TransformWrapper>
+            <ImageZoomWrapper>
+              <Image objectFit="contain" src={productDetail?.image} alt={productDetail?.title} width={500} height={500} title={productDetail?.title} />
+            </ImageZoomWrapper>
           </div>
           <div className={styles.product_content}>
             <h1 className="font-22 bold mb-15 c-black">{ productDetail?.title }</h1>
@@ -62,12 +49,7 @@ const ProductDetail = ({ productList, productDetail } : ProductDetailProps ) => 
             }
           </div>
         </div>
-       <div>
-        <div className="max-width">
-            <TitleLine customClass="font-36 c-black bebas mt-55 mb-0" title="Productos relacionados" />
-          </div>
-          <ProductGrid productList={productList} />
-       </div>
+        <RelatedProducts productList={productList} />
       </article>
     </>
   );

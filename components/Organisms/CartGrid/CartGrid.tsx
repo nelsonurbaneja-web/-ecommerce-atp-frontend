@@ -6,10 +6,9 @@ import ProductCartItem from 'components/Molecules/ProductCartItem/ProductCartIte
 
 const CartGrid = () => {
   const { state } = useContext(CartContext)
-  console.log(state.cart)
 
   const textWhatsApp = useMemo(() => {
-    return (`Hola, quiero comprar *${state.cart.length}* producto(s).\n ${state.cart.map(product => `${product.title} - ${formatPrice(product.price)} \n`)} \n Total: ${`*${formatPrice(state.cart.reduce((acc, product) => acc + product.price, 0))}*`}`)
+    return (`Hola, quiero comprar *${state.cart.length}* producto(s).\n ${state.cart.map((product, key) => `${key + 1}. ${product.title} - ${formatPrice(product.price)}\n`)} \n Total: ${`*${formatPrice(state.cart.reduce((acc, product) => acc + product.price, 0))}*`}`)
   }, [state.cart])
 
   const handleClickWhatsapp = () => {

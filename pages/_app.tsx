@@ -5,7 +5,7 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import '/styles/styles.scss'
 
-function MyApp({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps } : AppProps) => {
   return (
     <>
       <Head>
@@ -26,4 +26,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   )
 }
 
-export default MyApp
+export default App
