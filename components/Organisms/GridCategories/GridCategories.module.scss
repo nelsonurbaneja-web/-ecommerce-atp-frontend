@@ -6,7 +6,7 @@
   top: var(--headerHeight);
   background-color:white;
   z-index: var(--z-fixed);
-  padding: 2rem 1rem 2rem;
+  padding: 2rem 0 2rem;
   border-top: 1px solid #eaeaea;
   box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
   overflow-x: auto;
@@ -17,17 +17,19 @@
   width: 100%;
   padding-left: 0;
   margin-bottom: 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
-  @include from(880px) {
-    justify-content: center;
-  }
+  text-align: center;
+  // display: flex;
+  // justify-content: flex-start;
+  // align-items: center;
+  // gap: 1rem;
+  // @include from(880px) {
+  //   justify-content: center;
+  // }
 
 }
 
 .grid_categories_item {
+  width: 100%;
   padding: 1rem;
   background-color: white;
   color: var(--red);

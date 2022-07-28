@@ -101,7 +101,7 @@ export const GridCars = () => {
             breakpoints={{
               300: {
                 slidesPerView: 2,
-                spaceBetween: 10,
+                spaceBetween: 15,
               },
               450: {
                 slidesPerView: 3,
@@ -127,7 +127,7 @@ export const GridCars = () => {
                 slidesPerView: 8,
                 spaceBetween: 15,
               }
-            }}> 
+          }}> 
             {listMarcas.map(item => (
               <SwiperSlide key={item.id}>  
                 <Image placeholder="blur" src={item.image} alt={item.title} width={150} height={150} objectFit="contain"/>
