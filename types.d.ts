@@ -3,6 +3,6 @@ export interface Product  {
   price: number
   title: string
   slug: string
-  image: StaticImageData
+  image: string[]
   description: string
 }

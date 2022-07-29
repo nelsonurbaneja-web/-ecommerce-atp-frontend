@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
-import Image from "next/image";
+import { useContext, useState } from "react";
 import styles from "./ProductDetail.module.scss";
 import { Product } from "types";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { addProductToCartToLocalStorage } from 'services/addProductToCartToLocalStorage'
 import { CartContext } from "context/CartContext";
 import { formatPrice } from "services/formatPrice";
-import ImageZoomWrapper from "components/Molecules/ImageZoomWrapper/ImageZoomWrapper";
 import RelatedProducts from "components/Organisms/RelatedProducts/RelatedProducts";
+import SwiperPrincipalDetailProduct from "components/Organisms/SwiperPrincipalDetailProduct/SwiperPrincipalDetailProduct";
+import SwiperGridDetailProduct from "components/Organisms/SwiperGridDetailProduct/SwiperGridDetailProduct";
 
 interface ProductDetailProps {
   productList: Product[]
@@ -17,6 +17,7 @@ interface ProductDetailProps {
 const ProductDetail = ({ productList, productDetail } : ProductDetailProps ) => {
   const {state, dispatch} = useContext(CartContext)
   const findProduct: boolean = state.cart.some(product => product.id === productDetail?.id)
+  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
 
   const addProduct = () => {
     dispatch({
@@ -31,9 +32,8 @@ const ProductDetail = ({ productList, productDetail } : ProductDetailProps ) => 
       <article className={styles.product_detail_container}>
         <div className={`max-width ${styles.product_detail}`}>
           <div className={styles.product_image}>
-            <ImageZoomWrapper>
-              <Image objectFit="contain" src={productDetail?.image} alt={productDetail?.title} width={500} height={500} title={productDetail?.title} />
-            </ImageZoomWrapper>
+            <SwiperGridDetailProduct productDetail={productDetail} setThumbsSwiper={setThumbsSwiper} />
+            <SwiperPrincipalDetailProduct productDetail={productDetail} thumbsSwiper={thumbsSwiper} />
           </div>
           <div className={styles.product_content}>
             <h1 className="font-22 bold mb-15 c-black">{ productDetail?.title }</h1>

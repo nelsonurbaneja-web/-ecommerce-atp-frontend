@@ -30,7 +30,7 @@ const ProductCartItem = ({ product } : ProductCartItemProps) => {
         <TiDelete size={30} color="#ff4d4f"/>
       </div>
       <div className={styles.cart_image}>
-        <Image src={product.image} alt={product.title} width={100} height={100} title={product.title} />
+        <Image src={product.image[0]} alt={product.title} width={100} height={100} title={product.title} />
       </div>
       <div className={styles.cart_content}>
         <Link href={`/producto/${product.slug}`} ><p title={product.title} className="font-14 mt-0 mb-10 bold text-ellipsis-3 cursor_p">{product.title}</p></Link>

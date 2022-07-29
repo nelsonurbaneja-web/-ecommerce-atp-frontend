@@ -11,16 +11,16 @@ const ImageZoomWrapper = ({ children } : ImageZoomWrapperProps) => {
   return (
     <TransformWrapper>
       {({ zoomIn, zoomOut, resetTransform} : any ) => (
-        <>
-        <TransformComponent>
-          { children }
-        </TransformComponent>
-        <div className={styles.product_image_controls}>
-          <HiOutlineZoomIn onClick={() => zoomIn()} />
-          <HiOutlineZoomOut onClick={() => zoomOut()} />
-          <AiOutlineFullscreenExit onClick={() => resetTransform()} />
+        <div>
+          <TransformComponent>
+            { children }
+          </TransformComponent>
+          <div className={styles.product_image_controls}>
+            <HiOutlineZoomIn onClick={() => zoomIn()} />
+            <HiOutlineZoomOut onClick={() => zoomOut()} />
+            <AiOutlineFullscreenExit onClick={() => resetTransform()} />
+          </div>
         </div>
-        </>
       )}
     </TransformWrapper>
   )

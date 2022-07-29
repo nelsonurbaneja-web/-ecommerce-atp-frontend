@@ -1,0 +1,17 @@
+.swiper_grid {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--gray-fondo);
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-right: .5rem;
+}
+
+.swiper_grid_item {
+  cursor: pointer;
+  border: 1px solid var(--gray-fondo);
+  border-radius: 6px;
+  &.swiper-slide-thumb-active {
+    border-bottom: 4px solid var(--gray-fondo) !important;
+  }
+}
+

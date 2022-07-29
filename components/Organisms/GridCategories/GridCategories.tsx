@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Autoplay, Pagination, Scrollbar } from "swiper"
+import { Pagination, Scrollbar } from "swiper"
 import styles from './GridCategories.module.scss'
 import 'swiper/css'
 import "swiper/css/pagination"
