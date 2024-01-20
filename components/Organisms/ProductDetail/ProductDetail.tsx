@@ -37,9 +37,9 @@ const ProductDetail = ({ productList, productDetail } : ProductDetailProps ) => 
           </div>
           <div className={styles.product_content}>
             <h1 className="font-22 bold mb-15 c-black">{ productDetail?.title }</h1>
-            <p className="font-36 light mt-0 mb-15">{ formatPrice(productDetail?.price) }</p>
-            <p className="font-18 light mt-0 mb-5">Bs.56,60</p>
-            <p>{ productDetail?.description }</p>
+            <p className="font-36 light mt-0 mb-15 c-black">{ formatPrice(productDetail?.price) }</p>
+            <p className="font-22 light mt-0 mb-15 c-black">Bs.56,60</p>
+            <p className="font-16 light mt-0 mb-15 c-bold">{ productDetail?.description }</p>
             {
               findProduct ? (
                 <button className="button primary block" disabled>Agregado</button>

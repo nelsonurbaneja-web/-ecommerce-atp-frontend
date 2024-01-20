@@ -13,7 +13,7 @@ const Home = ({ productList } : InferGetStaticPropsType<typeof getStaticProps>) 
     <>
       <GridCars />
       <GridCategories />
-      <ProductGrid productList={productList} space_top title="Productos destacados" />
+      <ProductGrid productList={productList ?? []} space_top title="Productos destacados" />
     </>
   )
 }

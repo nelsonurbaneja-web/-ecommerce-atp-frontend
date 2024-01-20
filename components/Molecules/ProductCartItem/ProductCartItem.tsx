@@ -33,9 +33,9 @@ const ProductCartItem = ({ product } : ProductCartItemProps) => {
         <Image src={product.image[0]} alt={product.title} width={100} height={100} title={product.title} />
       </div>
       <div className={styles.cart_content}>
-        <Link href={`/producto/${product.slug}`} ><p title={product.title} className="font-14 mt-0 mb-10 bold text-ellipsis-3 cursor_p">{product.title}</p></Link>
+        <Link href={`/producto/${product.slug}`} ><p title={product.title} className="font-18 mt-0 mb-10 sm-bold text-ellipsis-3 c-bold cursor_p">{product.title}</p></Link>
         <p className="font-14 mt-0 mb-10 light text-ellipsis-3">{product.description}</p>
-        <p className="font-16 bold mt-0 mb-15">{ formatPrice(product.price) }</p>
+        <p className="font-16 sm-bold mt-0 mb-15">{ formatPrice(product.price) }</p>
       </div>
     </div>
   )

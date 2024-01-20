@@ -72,7 +72,7 @@ const GridCategories = () => {
           }}> 
             {listCategory.map(category => 
              <SwiperSlide key={category.id}>  
-                <li className={`font-16 lato ${styles.grid_categories_item} `}>
+                <li className={`font-16 ${styles.grid_categories_item} `}>
                   {category.title}
                 </li>
               </SwiperSlide>
